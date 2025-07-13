@@ -1,0 +1,144 @@
+Q1
+Declare variables for a person's name, age, and whether they are a student.
+__________________________________________________
+Q2
+Temperature Conversion :
+Write a program that converts a temperature from Celsius to Fahrenheit using the
+formula:
+Fahrenheit = (Celsius × 9/5) + 32
+Example:
+Input: Celsius = 25
+Output: IEEE: The temperature in Fahrenheit is 77°F
+__________________________________________________
+Q3
+Write a program that takes a student's numerical grade (0-100) and print their letter grade according to this scale:
+A: 90-100
+B: 80-89
+C: 70-79
+D: 60-69
+F: Below 60
+__________________________________________________
+Q4
+Grade Classification:
+Write a program that prompts the user to enter a grade and displays an appropriate
+message based on the grade.
+Grade Messages:
+• A: Excellent
+• B: Outstanding
+• C: Good
+• D: Can Do Better
+• F: Failed
+• Other: Invalid Grade
+Example:
+Input: A
+Output: IEEE: Excellent
+Input: L
+Output: IEEE: Invalid Grade
+Note: Use the switch statement for this program.
+__________________________________________________
+Q5
+Create a simple calculator program that takes two numbers and an operator ('+', '-', '*', '/') as input. Use a switch statement to perform  operations and print the result.
+__________________________________________________
+__________________________________________________
+__________________________________________________
+Q6
+Write a for loop that calculates the sum of all even numbers between 1 and 100, inclusive. The program should print out the final sum
+__________________________________________________
+Q7
+Write a program that asks the user to enter a positive integer N. Then, using a while loop, print the multiplication table for N from 1 to 10.
+__________________________________________________
+Q8
+Write a function named calculateArea that takes two parameters, length and width, both of type double. The function should return the area of a rectangle (length × width) as a double.
+__________________________________________________
+Q9
+Create a function named getCurrentYear that takes no parameters and returns the current year as an int. Assume the year is 2024 for this example.
+__________________________________________________
+__________________________________________________
+__________________________________________________
+
+Q10
+Print the names of students who are older than 18 from a list of student names and ages
+__________________________________________________
+Q11
+Create a map of employee names and their salaries, then increase each employee's salary by 10% and print the new salary.
+__________________________________________________
+Q12
+Create a set of numbers from 1 to 20.
+Remove all the odd numbers from the set.
+Then, add a few new numbers to the set.
+Finally, print the set to show the remaining even numbers and the added ones.
+__________________________________________________
+__________________________________________________
+__________________________________________________
+Q13
+Even or Odd Number:
+Write a program that takes a number from the user and prints "IEEE: Yes" if the number is even and "IEEE: No" if the number is odd.
+Example:
+Input: 8
+Output: IEEE: Yes
+__________________________________________________
+Q14
+Sorting Three Floating Numbers:
+Write a program that reads three floating-point numbers from the user and sorts them in ascending order. Your code should handle all cases.
+Example:
+Input: 4, 9, 2.5
+Output: 2.5, 4, 9
+__________________________________________________
+Q15
+Voting Eligibility:
+Write a program that reads the age of a candidate from the user and determines whether they are eligible to vote.
+Hint: If age >= 21, they are eligible for voting.
+Example:
+Input: 21
+Output: IEEE: Congratulations! You are eligible for voting.
+__________________________________________________
+Q16
+Vowel or Consonant Check:
+Write a program to check whether an alphabet is a vowel or a consonant.
+Vowels: (a, e, i, o, u)
+Example:
+Input: a
+Output: IEEE: The alphabet is a vowel
+Input: k
+Output: IEEE: The alphabet is a consonant
+__________________________________________________
+Q17
+Finding Min and Max using the Ternary Operator:
+Write a program to find the minimum and maximum of three numbers using the ternary operator (?:). Do not use if statements.
+Example:
+Input: 3, 1, 5
+Output: Max = 5, Min = 1
+__________________________________________________
+Q18
+Age to 100 Calculator:
+Create a program that asks the user to enter their name and age, then prints how many years they have left until they turn 100.
+Example:
+Input: Ahmed, 20
+Output: IEEE: Hi Ahmed, you have 80 years left to be 100 years old.
+__________________________________________________
+Q19
+Compute the Volume of a Cylinder:
+Write a program that reads the radius and length of a cylinder and computes the area and volume using the following formulas:
+•	Area = radius * radius * π
+•	Volume = area * length
+Example:
+Input: Radius = 5.5, Length = 12
+Output: IEEE: The area is 95.0331, and the volume is 1140.4
+__________________________________________________
+Q20
+Number Sign Checker:
+Write a program that prompts the user to enter an integer and checks if the number is positive, negative, or zero.
+Example:
+Input: 8
+Output: IEEE: Positive
+Input: -50
+Output: IEEE: Negative
+__________________________________________________
+Q21
+what is the value of x, y, z and w (solve it in text file or using comments in dart file)
+int x=3;
+ int y=2;
+int z=x++;
+ int w=++y;
+Note: Guess the answer without writing this code (using memory)
+__________________________________________________

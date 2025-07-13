@@ -1,0 +1,67 @@
+********************** OOP **********************
+Q13
+Create a class called Book with the following properties:
+title (String)
+author (String)
+price (double)
+Add a method discountedPrice in the Book class that applies a discount of 10% to the price of the book and returns the discounted price.
+Then, create an object of the Book class, set values for the properties, and print the original price and discounted price.
+__________________________________________________
+Q14
+Create a base class Employee with the following properties:
+name (String)
+id (int)
+Add a method displayInfo() to display the name and ID of the employee.
+Then, create a subclass Manager that inherits from Employee and adds an additional property:
+department (String)
+Add a method displayManagerInfo() to display all information: name, ID, and department.
+__________________________________________________
+Q15
+Implement Class BankAccount with these specifications:
+
+It holds the following data:• accountID• balance
+
+The following methods apply to this class:
+
+• Constructors: There are 2 constructors
+
+First constructor sets the balance to a given value
+
+Second constructor is a no-argument constructor, and it sets thebalance to 0
+• withdraw: withdraws an amount of money from the account if the balanceis sufficient
+• deposit: deposits an amount of money in the account
+__________________________________________________
+Q16
+Implement the class called Holiday like the code below. An object of class Holiday represents a holiday during the year.
+
+It holds the following data:
+
+• name the name of the holiday
+• day: number of the day in the month
+• month: month name
+
+You should implement the following:
+
+• Constructor: Write a constructor for the class Holiday, which takes name, day, and month as its arguments, and set the class variables to these values
+• inSameMonth: Write this method that takes two objects of the class Holiday and compares them then return a Boolean value true if they have the same month, and false if they do not.
+• avgDate: Write this method that takes an array of base type Holiday as its argument, and returns the average of the attribute day in every Holiday object in the array. You may assume that the array is full (i.e. does not have any null entries).
+• Test in main: Write a piece of code that creates an object Holiday with data: the name “Independence Day”, the day “4” and the month “July” and test previous methods in the main function.
+__________________________________________________
+Implement the class Movie as code below. An object of a class Movie represents a film.
+
+It holds the following data:
+
+● title
+● studio: name of studio made a movie
+● rating: It is the rating of movies and represented like that: “PG13”, “PG”
+
+You should implement the following:
+
+• First constructor: Write a constructor for the class Movie which takes the title, studio, and rating.
+• Second constructor: Write another constructor for the class Movie which takes the title, and studio as parameters and sets the rating to the default value “PG”
+
+Hint: you can make the 2 constructors in only one constructor using optional or optional named parameters
+
+• getPG:  Write this method that takes an array of base type Movie as its argument and returns a new array of only those movies in the input array that their rating contains “PG”
+• Test in main: Write a piece of code that creates an object of Movie with data: the title “Casino Royale”, the studio “Eon Productions” and the rating “PG13” and test previous methods in the main function.
+__________________________________________________

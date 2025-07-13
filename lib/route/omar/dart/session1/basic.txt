@@ -1,0 +1,87 @@
+input -> processing -> output
+
+* Primitive Data Types :-
+
+1- String(سلاسل نصية) -> 'Menna Omar';
+String name = 'Menna Omar';
+ممكن كمان تعرف المتغير من غير ما تديه قيمة على طول
+String name ;
+name ='Menna Omar';
+
+2- int(عدد صحيح) -> 26;
+int age = 21;
+
+3- double(عدد عشرى - كسري) -> 73.5;
+double price = 73.5;
+
+4- bool (قيمة منطقية) -> true / false;
+bool hasDiscount = true;
+
+ *** Operator :-
+1- Assignment Operator
+= (assign operators)
+int num1 = 5;
+int num2 = 3;
+int result = num1 + num2;
+
+2- Arithmetic Operators :-
+num1 + num2;
+num1 - num2;
+num1 * num2;
+num1 / num2; -> 10/2= 5.0 , 5/2 = 2.5 ( (/division) double بياخد)
+num1 ~/ num2; -> 10~/2= 5 , 5~/2 = 2 ( (~/ integerDivision) int بياخد)
+num1 % num2; -> 11%2 = 1 , 24%5 =4 ,10%2 =0 , 5%2 = 1 ,91%45 = 1 ( modulo % باقى القسمة من الرقم)
+
+3- Compound Assignment Operators :-
+num1 =3;
+num1 +=5; --> num1 = num1 + 5;
+num1 -=5; --> num1 = num1 - 5;
+num1 *=5; --> num1 = num1 * 5;
+num1 /=5; --> num1 = num1 / 5;
+num1 ~/=5; --> num1 = num1 ~/ 5;
+num1 %=5; --> num1 = num1 % 5;
+
+-ex:
+int num1 = 3;
+num1 += 5; // num1 = 8
+num1 -= 2; // num1 = 6
+num1 *= 3; // num1 = 18
+num1 ~/= 2; // num1 = 9
+num1 %= 4; // num1 = 1
+
+4- Comparison Operators :-
+> < >= <= == !=
+num1 =5;
+num2 =3;
+num1 > num2  true
+num1 >= num2  true
+num1 < num2  false
+num1 <= num2  false
+num1 == num2  false
+num1 != num2  true (!= لا تساوي بتعكس المعني اللى قبلها طالما اتحطت قبلها )
+ex:-
+int num1 = 5;
+int num2 = 3;
+bool isGreater = num1 > num2; // true
+bool isEqual = num1 == num2; // false
+
+5- Logical Operators :-
+&& || !
+
+&& and و ---> false بتدور على
+&& --> لو كلهم ترو فهترجع ترو , انما لو واحدة بس false ف هترجع false
+true && true -> true
+true && false -> false
+false && true -> false
+false && false -> false
+
+|| or او ---> true بتدور على
+or --> لو واحدة بس ترو هترجع ترو
+true || true -> true
+true || false -> true
+false || true -> true
+false || false -> false
+
+! not --> تعكس القيمة
+!true --> false
+!false --> true
