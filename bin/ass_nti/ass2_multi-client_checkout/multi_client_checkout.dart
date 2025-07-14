@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main() {
+  int customerCount = 0;
   while (true) {
     showMenu();
 
@@ -83,6 +84,8 @@ void main() {
       total: total,
     );
 
+    customerCount++;
+    print('You have served $customerCount customer(s) so far.');
 
     String again = prompt('Serve another customer? (yes/no): ').toLowerCase();
     if (again != 'yes') {
@@ -107,7 +110,6 @@ void showMenu() {
 
 void showProducts() {
   print('Available products: ');
-
   products.forEach((key, value) {
     print('$key.${value['name']} -\$${value['price']}');
   });
@@ -144,6 +146,7 @@ void printReceipt({
 }) {
   print('\n${'=' * 40}');
   print('\n==================== Receipt ====================');
+  print('Date:${DateTime.now()}');
   print('Customer Name:$customerName');
   print('Customer Phone:$customerPhone\n');
 
@@ -158,7 +161,7 @@ void printReceipt({
   print('Delivery Fee: \$${deliveryFee.toStringAsFixed(2)}');
   print('Total: \$${total.toStringAsFixed(2)}');
 
-  print('\n${'-' * 40}');
+  print('\nReceipt is ready!');
   print('\nThank you for shopping with us, $customerName!');
   print('Ready for next customer...\n\n');
 }
