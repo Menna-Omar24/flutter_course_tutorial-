@@ -38,26 +38,25 @@ void main() {
           'quantity': quantity,
         });
       }
+      print('${product['name']} x $quantity added to cart.');
     }
-    print('\nYour cart:');
-    for (var item in cart) {
-      print('${item['name']} - \$${item['price']} x ${item['quantity']}');
-    }
-
     if (cart.isEmpty) {
       print('Your cart is empty. Please add products to continue.');
       continue;
     }
 
+    print('\nYour cart:');
+    for (var item in cart) {
+      print('${item['name']} - \$${item['price']} x ${item['quantity']}');
+    }
+
     print('\nReady to continue with customer info and receipt');
 
-    String customerName = prompt('Please enter your name: ');
-    String customerPhone = prompt('Please enter your phone number: ');
+    String customerName = capitalizedWords(prompt('Please enter your name: '));
+    String customerPhone =
+        capitalizedWords(prompt('Please enter your phone number: '));
 
-    double subtotal = 0;
-    for (var item in cart) {
-      subtotal += item['price'] * item['quantity'];
-    }
+    double subtotal = calculateSubtotal(cart);
 
     double tax = calculateTax(subtotal);
     double discount = calculateDiscount(subtotal);
@@ -69,28 +68,21 @@ void main() {
     if (wantsDelivery == 'yes') {
       int distance = getPositiveInt('Enter delivery distance in km: ');
 
-      deliveryFee=calculateDeliveryFee(distance);
+      deliveryFee = calculateDeliveryFee(distance);
     }
     double total = subtotal + tax + deliveryFee - discount;
 
-    print('\n${'=' * 40}');
-    print('\n==================== Receipt ====================');
-    print('Customer Name:$customerName');
-    print('Customer Phone:$customerPhone\n');
+    printReceipt(
+      customerName: customerName,
+      customerPhone: customerPhone,
+      cart: cart,
+      subtotal: subtotal,
+      tax: tax,
+      discount: discount,
+      deliveryFee: deliveryFee,
+      total: total,
+    );
 
-    for (var item in cart) {
-      print(
-          '${item['name']} x ${item['quantity']} = \$${(item['price'] * item['quantity']).toStringAsFixed(2)}');
-    }
-
-    print('\nSubtotal: \$${subtotal.toStringAsFixed(2)}');
-    print('Tax(13%): \$${tax.toStringAsFixed(2)}');
-    print('Discount: \$${discount.toStringAsFixed(2)}');
-    print('Delivery Fee: \$${deliveryFee.toStringAsFixed(2)}');
-    print('Total: \$${total.toStringAsFixed(2)}');
-    print('\n${'-' * 40}');
-    print('Ready for next customer...\n\n');
-    print('\nThank you for shopping with us, $customerName!');
 
     String again = prompt('Serve another customer? (yes/no): ').toLowerCase();
     if (again != 'yes') {
@@ -110,6 +102,10 @@ final Map<int, Map<String, dynamic>> products = {
 
 void showMenu() {
   print('Welcome to the store!');
+  showProducts();
+}
+
+void showProducts() {
   print('Available products: ');
 
   products.forEach((key, value) {
@@ -128,9 +124,60 @@ double calculateDeliveryFee(int distance) {
   return 45;
 }
 
+double calculateSubtotal(List<Map<String, dynamic>> cart) {
+  double subtotal = 0;
+  for (var item in cart) {
+    subtotal += item['price'] * item['quantity'];
+  }
+  return subtotal;
+}
+
+void printReceipt({
+  required String customerName,
+  required String customerPhone,
+  required List<Map<String, dynamic>> cart,
+  required double subtotal,
+  required double tax,
+  required double discount,
+  required double deliveryFee,
+  required double total,
+}) {
+  print('\n${'=' * 40}');
+  print('\n==================== Receipt ====================');
+  print('Customer Name:$customerName');
+  print('Customer Phone:$customerPhone\n');
+
+  for (var item in cart) {
+    print(
+        '${item['name']} x ${item['quantity']} = \$${(item['price'] * item['quantity']).toStringAsFixed(2)}');
+  }
+
+  print('\nSubtotal: \$${subtotal.toStringAsFixed(2)}');
+  print('Tax(13%): \$${tax.toStringAsFixed(2)}');
+  print('Discount: \$${discount.toStringAsFixed(2)}');
+  print('Delivery Fee: \$${deliveryFee.toStringAsFixed(2)}');
+  print('Total: \$${total.toStringAsFixed(2)}');
+
+  print('\n${'-' * 40}');
+  print('\nThank you for shopping with us, $customerName!');
+  print('Ready for next customer...\n\n');
+}
+
 String prompt(String message) {
   stdout.write(message);
   return stdin.readLineSync() ?? '';
+}
+
+String capitalizedWords(String text) {
+  return text
+      .trim()
+      .split(' ')
+      .map(
+        (word) => word.isEmpty
+            ? ''
+            : word[0].toUpperCase() + word.substring(1).toLowerCase(),
+      )
+      .join(' ');
 }
 
 int getPositiveInt(String message) {
