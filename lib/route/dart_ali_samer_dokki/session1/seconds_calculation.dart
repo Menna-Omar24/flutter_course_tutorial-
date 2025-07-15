@@ -1,8 +1,8 @@
 import 'dart:io';
 
-void main(){
+void main() {
   // parsing
-  print("Enter the number of seconds");
+   print("Enter the number of seconds");
   int secs = int.parse(stdin.readLineSync()!);
   int h = secs ~/ 3600;
   secs = secs % 3600;

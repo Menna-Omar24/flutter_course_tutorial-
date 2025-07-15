@@ -1,8 +1,8 @@
 import 'dart:io';
 
-void main(){
+void main() {
   // for loop -> number of iterations (defined)
-     // start   // s.c  // increment / decrement
+  // start   // s.c  // increment / decrement
   /*for(int i=0 ; i<=10 ; i++ ){    // i = 11
     print(i);
   }*/
@@ -27,12 +27,12 @@ void main(){
 
   int n = int.parse(stdin.readLineSync()!);
   int sum = 0;
-  for(int i=1;i<=n;i++){
-    sum = sum+i;
+  for (int i = 1; i <= n; i++) {
+    sum = sum + i;
   }
   print(sum);
   // O(n)
 
-  int result = (n*(n+1))~/2; // 1 O(1)
+  int result = (n * (n + 1)) ~/ 2; // 1 O(1)
   print(result);
 }

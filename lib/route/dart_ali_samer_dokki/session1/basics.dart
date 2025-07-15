@@ -14,7 +14,6 @@
 // String : "Mohamed" , 'y' , "999", "y"
 // bool : 5>9 : false , true
 
-
 // int x = 5
 // int y = 11
 
@@ -54,8 +53,13 @@
 // !F -> T
 
 // x=8 , y=11
+// !(((x<y)&&(y=11)) || (!(x>y)&&(x<9)))
 // !(T) F
-
+void main() {
+  int x = 8;
+  int y = 11;
+  print(!(((x < y) && (y == 11)) || (!(x > y) && (x < 9))));
+}
 // 6) increment / decrement operators
 // ++ -- , x++ : x = x + 1 , x-- : x = x-1
 // ++x , x++
@@ -82,7 +86,6 @@
 // 3/2 : 1 -> 1
 // 1/2 : 0 -> 1
 // 12 -> 1100
-
 
 // %
 
