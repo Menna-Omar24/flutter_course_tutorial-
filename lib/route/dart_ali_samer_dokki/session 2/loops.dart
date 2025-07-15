@@ -24,7 +24,7 @@ void main() {
   int n1 = 8;
   int n2 = 5;
   int n3 = 7;*/
-
+/*
   int n = int.parse(stdin.readLineSync()!);
   int sum = 0;
   for (int i = 1; i <= n; i++) {
@@ -34,5 +34,21 @@ void main() {
   // O(n)
 
   int result = (n * (n + 1)) ~/ 2; // 1 O(1)
-  print(result);
+  print(result);*/
+
+/*  print('Enter Factorial Number: ');
+  int n = int.parse(stdin.readLineSync()!);
+  int factorial = 1;
+  for (int i = 1; i <= n; i++) {
+    factorial *= i;
+  }
+  print("factorial: $factorial");*/
+
+  print('Enter Factorial Number: ');
+  int n = int.parse(stdin.readLineSync()!);
+  int factorial = 1;
+  for (int i = n; i >= 1; i--) {
+    factorial *= i;
+  }
+  print("factorial: $factorial");
 }

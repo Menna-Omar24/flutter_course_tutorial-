@@ -9,21 +9,28 @@
 
 import 'dart:io';
 
-void main(){
+void main() {
   print("Enter a number ");
   int number = int.parse(stdin.readLineSync()!);
-  int counter = 0;
-  for(int i=2;i<number;i++){
-    if(number%i==0){
+  for (int i = 2; i < number; i++) {
+    if (number % i == 0) {
       print("Not prime");
-      return ;
+      return;
     }
-    print(counter);
   }
   print("Prime");
-  /*if(counter==2){
+
+  print("Enter a number ");
+  int number2 = int.parse(stdin.readLineSync()!);
+  int counter2 = 0;
+  for (int i = 1; i <= number2; i++) {
+    if (number2 % i == 0) {
+      counter2++;
+    }
+  }
+  if (counter2 == 2) {
     print("Prime");
-  }else{
+  } else {
     print("Not prime");
-  }*/
+  }
 }

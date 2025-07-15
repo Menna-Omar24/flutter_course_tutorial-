@@ -1,0 +1,152 @@
+Task 1: Bank Account Simulation with Profit Prediction
+Task Description:
+
+Create a console program to manage a single bank account. The program should allow the user to:
+
+    Create an account by entering their name, account number, account type (savings or checking), and initial balance.
+
+    Perform deposits and withdrawals with input validation.
+
+    Predict the future balance based on a profit-sharing model.
+
+    View the account summary showing all details.
+
+Menu Options:
+
+1. Deposit
+2. Withdraw
+3. Predict Future Balance (Profit Model)
+4. View Account Summary
+5. Exit
+
+Details and Examples for Each Option:
+1. Deposit
+
+    Add money to the account balance. Reject negative amounts.
+
+Example:
+
+Choose an option: 1
+Enter amount to deposit: 500
+Deposit successful. New balance: $2000.50
+
+Choose an option: 1
+Enter amount to deposit: -100
+Invalid amount. Deposit failed.
+
+2. Withdraw
+
+    Subtract money from the balance if sufficient funds are available. Reject negative amounts.
+
+Example:
+
+Choose an option: 2
+Enter amount to withdraw: 300
+Withdrawal successful. New balance: $1700.50
+
+Choose an option: 2
+Enter amount to withdraw: 2000
+Insufficient balance. Withdrawal denied.
+
+Choose an option: 2
+Enter amount to withdraw: -50
+Invalid amount. Withdrawal failed.
+
+3. Predict Future Balance (Profit Model)
+
+    Ask for the number of years (integer).
+
+    Ask for the annual profit rate (percentage).
+
+    Calculate the future balance using the formula:
+    Future Balance=Current Balance×(1+Profit Rate×Years)
+    Future Balance=Current Balance×(1+Profit Rate×Years)
+
+    Display the predicted future balance (double) and the rounded balance as an integer.
+
+Example:
+
+Choose an option: 3
+Enter number of years: 3
+Enter annual profit rate (%): 6
+
+Predicted future balance after 3 years: $2031.54
+Rounded balance: $2031
+
+4. View Account Summary
+
+    Display the name, account number, account type, and current balance (both as double and integer).
+
+Example:
+
+Choose an option: 4
+
+Account Summary:
+Name: Ahmed Khan
+Account Number: 123456
+Account Type: savings
+Current Balance: $1700.50
+Rounded Balance: $1700
+
+5. Exit
+
+    End the program.
+
+Input Validation:
+
+    Reject invalid account types (only "savings" or "checking" allowed).
+
+    Reject negative amounts for deposits and withdrawals.
+
+    Prevent withdrawals that exceed the current balance.
+
+    Number of years and profit rate must be zero or positive.
+
+Sample Full Interaction:
+
+Enter your name: Ahmed Khan
+Enter account number: 123456
+Enter account type (savings/checking): savings
+Enter initial balance: 1500.50
+
+------ Menu ------
+1. Deposit
+2. Withdraw
+3. Predict Future Balance (Profit Model)
+4. View Account Summary
+5. Exit
+Choose an option: 1
+Enter amount to deposit: 500
+Deposit successful. New balance: $2000.50
+
+Choose an option: 2
+Enter amount to withdraw: 300
+Withdrawal successful. New balance: $1700.50
+
+Choose an option: 3
+Enter number of years: 3
+Enter annual profit rate (%): 6
+Predicted future balance after 3 years: $2031.54
+Rounded balance: $2031
+
+Choose an option: 4
+
+Account Summary:
+Name: Ahmed Khan
+Account Number: 123456
+Account Type: savings
+Current Balance: $1700.50
+Rounded Balance: $1700
+
+Choose an option: 5
+Thank you for using the banking system. Goodbye!
+
+Functions to Implement (suggested):
+
+function showMenu()
+function deposit()
+function withdraw()
+function calculateProfit()
+function showSummary()
+
+Complete the program using appropriate data types, loops, conditional statements, functions, and input validation.

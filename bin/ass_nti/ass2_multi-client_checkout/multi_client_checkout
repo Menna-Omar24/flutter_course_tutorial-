@@ -1,0 +1,94 @@
+🛒 Task 2: Multi-Client Checkout System
+📋 Business Rules:
+
+    The store offers 5 fixed products:
+
+    1. Keyboard - $100
+    2. Mouse - $50
+    3. Monitor - $300
+    4. USB Cable - $20
+    5. Headphones - $150
+
+    For each client:
+
+        The customer chooses products by number and quantity until done (enter 0).
+
+        The program then asks for the client’s name and phone number.
+
+        Calculates subtotal, tax, discount, and delivery fee (if any).
+
+        Shows a detailed receipt.
+
+    After finishing one client’s order, the program resets and allows the next client to start shopping.
+
+    This continues until the program is manually stopped (or you can add an option to quit).
+
+🧾 Example for One Client:
+
+Customer input:
+
+    Product 3 (Monitor), quantity 2
+
+    Product 2 (Mouse), quantity 1
+
+    Done shopping (enter 0)
+
+    Client enters name: John Doe
+
+    Client enters phone: 123-456-7890
+
+    Wants delivery
+
+    Distance: 25 km
+
+🖥️ Sample Program Output for That Client:
+
+Welcome to the store!
+Available products:
+1. Keyboard - $100
+2. Mouse - $50
+3. Monitor - $300
+4. USB Cable - $20
+5. Headphones - $150
+
+Enter product number to add to cart (0 to finish): 3
+Enter quantity: 2
+
+Enter product number to add to cart (0 to finish): 2
+Enter quantity: 1
+
+Enter product number to add to cart (0 to finish): 0
+
+Please enter your name: John Doe
+Please enter your phone number: 123-456-7890
+
+Subtotal: $650.00
+Tax (13%): $84.50
+Discount: $0.00
+
+Do you want delivery? (yes/no): yes
+Enter delivery distance in km: 25
+Delivery fee: $45.00
+
+----------------------------
+Total amount to pay: $779.50
+
+Thank you for shopping with us, John Doe!
+-----------------------------------------
+
+Ready for next customer...
+
+Notes:
+
+    After finishing one client’s transaction and showing the summary, the program should clear any stored totals and start fresh for the next customer.
+
+    This simulates a real store checkout system handling multiple customers one after another.
+
+Functions to Implement (suggested):
+
+function showMenu()
+function calculateTax()
+function calculateDiscount()
+function calculateDeliveryFee()
+
+
