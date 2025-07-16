@@ -13,7 +13,7 @@ void main() {
   while (!exit) {
     showMenu();
 
-    int choice =getPositiveInt('Choose an option: ');
+    int choice = getPositiveInt('Choose an option: ');
 
     switch (choice) {
       case 1:
@@ -36,45 +36,6 @@ void main() {
         print('Invalid choice. Please try again.');
     }
   }
-}
-
-String prompt(String message) {
-  stdout.write(message);
-  return stdin.readLineSync() ?? '';
-}
-
-String capitalizedWords(String text) {
-  return text.trim().split(' ').map((word) {
-    if (word.isEmpty) return '';
-    return word[0].toUpperCase() + word.substring(1).toLowerCase();
-  }).join(' ');
-}
-
-String getValidText(String message) {
-  String input;
-  do {
-    input = prompt(message).trim();
-    if (input.isEmpty) print('Input Can\'t be empty');
-  } while (input.isEmpty);
-  return capitalizedWords(input);
-}
-
-int getPositiveInt(String message) {
-  int? value;
-  do {
-    value = int.tryParse(prompt(message));
-    if (value == null || value <= 0) print('Enter a positive number.');
-  } while (value == null || value <= 0);
-  return value;
-}
-
-double getPositiveDouble(String message) {
-  double? value;
-  do {
-    value = double.tryParse(prompt(message));
-    if (value == null || value < 0) print('Enter a valid number(0 or more).');
-  } while (value == null || value < 0);
-  return value;
 }
 
 Map<String, dynamic> createdAccount() {
@@ -154,4 +115,43 @@ void predictProfit(double balance) {
   print(
       'Predicted future balance after $years years: \$${futureBalance.toStringAsFixed(2)}');
   print('Rounded balance: \$$roundedBalance');
+}
+
+String prompt(String message) {
+  stdout.write(message);
+  return stdin.readLineSync() ?? '';
+}
+
+String capitalizedWords(String text) {
+  return text.trim().split(' ').map((word) {
+    if (word.isEmpty) return '';
+    return word[0].toUpperCase() + word.substring(1).toLowerCase();
+  }).join(' ');
+}
+
+String getValidText(String message) {
+  String input;
+  do {
+    input = prompt(message).trim();
+    if (input.isEmpty) print('Input Can\'t be empty');
+  } while (input.isEmpty);
+  return capitalizedWords(input);
+}
+
+int getPositiveInt(String message) {
+  int? value;
+  do {
+    value = int.tryParse(prompt(message));
+    if (value == null || value <= 0) print('Enter a positive number.');
+  } while (value == null || value <= 0);
+  return value;
+}
+
+double getPositiveDouble(String message) {
+  double? value;
+  do {
+    value = double.tryParse(prompt(message));
+    if (value == null || value < 0) print('Enter a valid number(0 or more).');
+  } while (value == null || value < 0);
+  return value;
 }
