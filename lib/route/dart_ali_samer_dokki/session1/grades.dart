@@ -10,27 +10,23 @@
 
 import 'dart:io';
 
-void main(){
+void main() {
   print("Enter the student grade");
   int grade = int.parse(stdin.readLineSync()!);
 
-  if(grade >= 90 && grade<=100){
+  if (grade >= 90 && grade <= 100) {
     print("A");
-  }
-  else if(grade >=80 && grade <=89){
+  } else if (grade >= 80 && grade <= 89) {
     print("B");
-  }
-  else if(grade >=70 && grade <=79){
+  } else if (grade >= 70 && grade <= 79) {
     print("C");
-  }
-  else if(grade >=60 && grade <=69){
+  } else if (grade >= 60 && grade <= 69) {
     print("C-");
-  }
-  else if(grade >=50 && grade <=59){
+  } else if (grade >= 50 && grade <= 59) {
     print("D");
-  }else if(grade >=0 && grade <=49){
+  } else if (grade >= 0 && grade <= 49) {
     print("F");
-  }else{
+  } else {
     print("Invalid grade");
   }
 }
