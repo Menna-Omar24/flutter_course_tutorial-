@@ -80,6 +80,7 @@ void bookSeat(
     validator: phoneValidator,
   );
 
+  // Save booking details
   seats[row - 1][col - 1] = 'B';
   bookings['$row,$col'] = {
     'name': capitalizedWords(name),
